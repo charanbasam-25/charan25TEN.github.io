@@ -1,0 +1,91 @@
+{
+    "summary": "Enthusiastic and passionate Frontend developer dedicated to continuous learning and contributing to the betterment of the web. Committed to staying updated with emerging technologies and industry best practices. Strong foundation in frontend development, quick to adapt and learn new frameworks, languages, and tools.",
+    "projects": [
+        {
+            "title": "Todos Application",
+            "description": "Developed persistent todo application with CRUD operations to the tracklist of tasks",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "Bootstap",
+                "JavaScript"
+            ],
+            "link": "https://todoappbasam.ccbp.tech/"
+        },
+        {
+            "title": "Fundamental Rights Quiz",
+            "description": "Developed a fundamental rights Quiz UI where the user is allowed to start the quiz and select the answer among four options displayed.",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "link": "https://frquizbasam.ccbp.tech/"
+        },
+        {
+            "title": "Emoji Game",
+            "description": "Developed responsive Emoji memory game where users can win it by clicking unique emoji each time till all displayed emojis are clicked. ALl emojis position will be randomizes after each click",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "ReactJS",
+                "JavaScript"
+            ],
+            "link": "https://charanemoji.ccbp.tech/"
+        },
+        {
+            "title": "Movie Listing Page",
+            "description": "Developed an application that displays the movies list based on the search text",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "link": "https://zivamemovies.ccbp.tech/"
+        },
+        {
+            "title": "ChatBot",
+            "description": "Developed a mini Chatbot Application which initially wishes user and responds to the user if user input matches to list of answers that chatbot maintains",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "Bootstap",
+                "JavaScript"
+            ],
+            "link": "https://chatbotbasam.ccbp.tech/"
+        }
+    ],
+    "skills": {
+        "frontend": [
+            {
+                "ReactJs": "3"
+            },
+            {
+                "Javascript": "3"
+            },
+            {
+                "TailwindCSS": "1"
+            },
+            {
+                "HTML5": "3"
+            },
+            {
+                "SCSS": "3"
+            },
+            {
+                "React Redux": "2"
+            }
+        ],
+        "backend": [
+            {
+                "Python": "3"
+            },
+            {
+                "NodeJs": "2"
+            },
+            {
+                "ExpressJS": "2"
+            }
+        ]
+    }
+}
