@@ -12,10 +12,12 @@ const  Projects= () => {
                         <h1 className='bg-white border border-black p-1 rounded-sm inline-block font-mono font-black my-2'>{project.title}</h1>
                         <p className='font-bold text-md'>{project.description}</p>
                         <div className='flex items-center justify-between'>
-                        <ul className='flex'>
-                            {project.technologies.map((tech) => <li className='pr-1 border border-black mr-2 my-2 text-center p-1 rounded-sm text-sm'>{tech}</li>)}
+                        <ul className='flex flex-wrap w-80'>
+                            {project.technologies.map((tech) => <li className='pr-1 border border-black mr-2 my-1 lg:my-2 text-center p-0.5 lg:p-1 rounded-sm text-xs lg:text-sm'>{tech}</li>)}
                         </ul>
-                        <a className='inline-block' href={project.link} target='_blank' rel="noreferrer"> Link<img className="ml-2 h-4 w-4 inline-block" alt="projectlink" src="https://i.imgur.com/LPziCTQ.png" title="source: imgur.com" /></a>
+                        <div className='flex flex-row justify-end w-20'>
+                        <a className='inline-block  text-xs lg:text-sm float-right' href={project.link} target='_blank' rel="noreferrer"> Link<img className="ml-2 h-3 w-3 lg:w-4 lg:h-4 inline-block" alt="projectlink" src="https://i.imgur.com/LPziCTQ.png" title="source: imgur.com" /></a>
+                        </div>
                         </div>
                     </div>
 
