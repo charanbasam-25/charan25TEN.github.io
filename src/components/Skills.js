@@ -23,7 +23,7 @@ const Skills = () => {
                             <p className='text-white mx-2 text-xl font-semibold my-6 inline-block w-60'>
                                 {Object.keys(each)[0]}
                             </p>
-                            <div className='inline-block border border-zinc-400 w-96 h-6 mx-2'>
+                            <div className='inline-block border border-zinc-400 w-auto h-6 mx-2'>
                                 <div
                                     className={` h-6 bg-gradient-to-r ${gradientColor}`}
                                     style={{ backgroundSize: '100% 100%' }}
@@ -54,7 +54,7 @@ const Skills = () => {
                             <p className='text-white mx-2 text-xl font-semibold my-6 inline-block w-60'>
                                 {Object.keys(each)[0]}
                             </p>
-                            <div className='inline-block border border-zinc-400 w-96 h-6 mx-2'>
+                            <div className='inline-block border border-zinc-400 w-auto h-6 mx-2'>
                                 <div
                                     className={` h-6 bg-gradient-to-r ${gradientColor}`}
                                     style={{ backgroundSize: '100% 100%' }}

@@ -8,7 +8,7 @@ const Home = () => {
   };
 
   return (
-    <div className="Home bg-amber-950 p-20 h-screen flex flex-col justify-center items-center" id="home">
+    <div className="Home bg-amber-950 mt-16 target: p-20 h-screen h-auto flex flex-col justify-center items-center" id="home">
       <div className="flex lg:justify-center items-center">
         <div className="lg:flex lg:justify-center lg:items-center ">
           <div className="rounded-full border border-beige flex justify-center items-center lg:h-56 lg:w-56 sm:h-10 sm:w-10 md:h-32 md:w-32 rounded-full hover:scale-110 transform hover:scale-110 transition-transform duration-300">
@@ -26,16 +26,16 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="resume-contact mt-32 flex flex-row items-center">
+      <div className="resume-contact lg:mt-32  mt-6 flex flex-row items-center">
         <a
-          className="px-12 py-4 mx-4 bg-beige font-mono rounded-md flex justify-center items-center hover:scale-110 transform hover:scale-110 transition-transform duration-300"
+          className="px-10 py-4 lg:py-4 w-13 bg-beige font-mono rounded-md flex justify-center items-center hover:scale-110 transform hover:scale-110 transition-transform duration-300"
           href="https://drive.google.com/file/d/1zIot4ll_S_BQOuNKQ9tgjdk3FgSveMy9/view"
           target="_blank"
           rel="noopener noreferrer"
         >
           <span className="inline-block">Resume</span>
           <img
-            className="inline-block ml-4 h-4 w-4"
+            className="inline-block ml-4 h-4 w-4 "
             width="24"
             height="24"
             src="https://img.icons8.com/material-rounded/24/download--v1.png"
@@ -43,7 +43,7 @@ const Home = () => {
           />
         </a>
         <div
-          className="px-12 py-4 mx-4 bg-beige font-mono font-medium rounded-md flex justify-center items-center hover:scale-110 transform hover:scale-110 transition-transform duration-300 tooltip-trigger"
+          className="px-10 py-4 ml-4 lg:py-4 w-13 bg-beige font-mono font-medium rounded-md flex justify-center items-center hover:scale-110 transform hover:scale-110 transition-transform duration-300 tooltip-trigger"
           onMouseEnter={handleTooltipToggle}
           onMouseLeave={handleTooltipToggle}
           style={{ position: 'relative', zIndex: 2 }}
