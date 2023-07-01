@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="Home bg-amber-950 mt-16 target: p-20 h-screen h-auto flex flex-col justify-center items-center" id="home">
       <div className="flex lg:justify-center items-center">
-        <div className="lg:flex lg:justify-center lg:items-center ">
+        <div className="lg:flex lg:justify-center lg:items-center">
           <div className="rounded-full border border-beige flex justify-center items-center lg:h-56 lg:w-56 sm:h-10 sm:w-10 md:h-32 md:w-32 rounded-full hover:scale-110 transform hover:scale-110 transition-transform duration-300">
             <img
               alt="profileImage"
@@ -57,15 +57,14 @@ const Home = () => {
             alt="new-post"
           />
           {showTooltip && (
-            <div className="tooltip bg-beige text-black text-sm px-2 py-1 rounded absolute z-10 top-0 transform -translate-y-full opacity-100">
+            <div className="tooltip bg-amber-950 text-beige text-sm px-2 py-1 rounded absolute z-10 right-0 transform transition-transform duration-300 slide-from-right">
               be.charankumar@gmail.com
             </div>
           )}
         </div>
       </div>
     </div>
+  );
+};
 
-    )
-}
-
-export default Home
+export default Home;
