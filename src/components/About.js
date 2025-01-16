@@ -1,88 +1,122 @@
-import React from 'react'
-import resumecontent from "../utils/resumeContent.json"
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const About = () => {
+    const fadeInUpVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+    };
+
+    const staggerContainer = {
+        hidden: {},
+        visible: {
+            transition: {
+                staggerChildren: 0.2,
+            },
+        },
+    };
+
     return (
-        <div id='about' className='mt-16 py-8    space-animation px-4 lg:px-16 lg:py-12 bg-orange-200 text-lg font-medium '>
-            <div className='border border-black mb-10 p-10'>
-                <h1 className="mb-4 hover:mx-10 text-4xl font-bold py-2 rounded-md  text-str text-center text-stroke-2 transform  hover:scale-110 transition-transform duration-300  " >Intro</h1>
-                <p className=' py-1'>Enthusiastic and passionate <p className='bg-gray-950 text-beige rounded-sm p-1 inline-block transform  hover:scale-9 0 transition-transform duration-300 lg:mx-1 mr-1'>Frontend developer</p> dedicated to continuous
-                    learning and contributing to betterment of web. Committed to staying
-                    updated with emerging technologies and industry best practices. Strong
-                    foundation in frontend development, quick to adapt and learn new
-                    frameworks, languages, and tools.</p>
-            </div>
-            <div className='border border-black p-10'>
-                <h1 className="lg:mt-2 mb-10  hover:mx-10 text-4xl font-bold  rounded-md  text-str text-center text-stroke-2 transform  hover:scale-110 transition-transform duration-300 ">Work Experience</h1>
-                <div className=''>
-                    <h1 className='w-24  text-black rounded-sm mt-4 text-3xl font-bold'>
-                        Zivame</h1>
-                    <h3 className='font-semibold  mt-0 mb-2'>May-2022<span className='px-4 no-underline'>-</span>Present</h3>
-                </div>
-                <ul className='list-disc pl-4'>
-                    <li class>Developed cross-browser-compatible features: Frequently Bought Together, More From Us, and Quick View.</li>
-                    <li>Ensured seamless functionality and consistent user experience across different browsers.
-                    </li>
-                    <li>Integrated Moengage, a third-party analytics tool, for comprehensive website analytics.</li>
-                    <li>Implemented a versatile refund method, allowing users to choose between refunding to the original payment source or their wallet.</li>
-                    <li>Collaborated with backend teams, QA teams, and product managers for seamless feature integration and timely project delivery.</li>
-                    <li>Conducted A/B testing to analyze user behavior and optimize website elements.</li>
-                    <li>Enhanced website SEO through comprehensive optimization techniques.</li>
-                    <li>Improved key web vitals for faster loading times, smoother interactions, and enhanced visual stability.</li>
-                </ul>
-                <div>
-                    <h4 className='py-4 underline'>Technologies used:</h4>
-                    <div className='flex flex-wrap'>
-                        <div className=' w-24 h-28 flex flex-col mx-2 text-center transform  hover:scale-110 transition-transform duration-300'>
-                            <img alt="technolgy" className="w-20" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png" />
-                            <h1>Javascript</h1>
-                        </div>
-                        <div className='w-24 h-28 mx-2 flex flex-col text-center transform  hover:scale-110 transition-transform duration-300'>
-                            <img alt="technolgy" className="w-20 h-20" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png   " />
-                            <h1>React Js</h1>
-                        </div>
-                        <div className='w-24 h-28 mx-2 flex flex-col text-center transform  hover:scale-110 transition-transform duration-300'>
-                            <img alt="technolgy" className="w-20" src="https://avatars.githubusercontent.com/u/70142?s=280&v=4" />
-                            <h1>JQuery</h1>
-                        </div>
-                        <div className='w-24 h-28 mx-2 flex flex-col text-center transform  hover:scale-110 transition-transform duration-300'>
-                            <img alt="technolgy" className="w-20 h-20" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1200px-Sass_Logo_Color.svg.png" />
-                            <h1>SCSS</h1>
-                        </div>
-                        <div className='w-24 h-28 mx-2 flex flex-col text-center transform  hover:scale-110 transition-transform duration-300'>
-                            <img alt="technolgy" className="w-20 h-20" src="https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png" />
-                            <h1>Redux</h1>
-                        </div>
-                        <div className='w-24 h-28 mx-2 flex flex-col text-center transform  hover:scale-110 transition-transform duration-300'>
-                            <img alt="technolgy" className="w-20 h-20" src="https://i0.wp.com/blog.fossasia.org/wp-content/uploads/2017/07/handlebars-js.png?fit=500%2C500&ssl=1" />
-                            <h1>Handlebars</h1>
-                        </div>
-                        <div className='w-24 h-28 mx-2 flex flex-col text-center transform  hover:scale-110 transition-transform duration-300'>
-                            <img alt="technolgy" className="w-20 h-20" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" />
-                            <h1>HTML 5</h1>
-                        </div>
-                        <div className='w-24 h-28 mx-2 flex flex-col text-center transform  hover:scale-110 transition-transform duration-300'>
-                            <img alt="technolgy" className="w-20 h-20" src="https://www.javatpoint.com/js/nodejs/images/node-js-tutorial.png" />
-                            <h1>NodeJs</h1>
-                        </div>
-                        <div className='w-24 h-28 mx-2 flex flex-col text-center transform  hover:scale-110 transition-transform duration-300'>
-                            <img alt="technolgy" className="w-20 h-20" src="https://ajeetchaulagain.com/static/7cb4af597964b0911fe71cb2f8148d64/87351/express-js.png" />
-                            <h1>ExpressJs</h1>
-                        </div>
-                        <div className='w-24 h-28 mx-2 flex flex-col text-center transform  hover:scale-110 transition-transform duration-300'>
-                            <img alt="technolgy" className="w-20 h-20" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" />
-                            <h1>Github</h1>
-                        </div>
-                        <div className='w-24 h-28 mx-2 flex flex-col text-center transform  hover:scale-110 transition-transform duration-300'>
-                            <img alt="technolgy" className="w-20 h-20" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" />
-                            <h1>Vs Code</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id='about' className='min-h-screen flex flex-col bg-gray-900 text-white'>
 
+            <div className='container mx-auto flex flex-wrap px-6' style={{paddingTop:"100px"}}>
+                {/* Left Section */}
+                <motion.div
+                    className="w-full md:w-3/4 p-8 bg-gray-800 rounded-lg shadow-md mb-12 md:mb-0"
+                    initial="hidden"
+                    animate="visible"
+                    variants={staggerContainer}
+                >
+                    {/* Intro Section */}
+                    <motion.div variants={fadeInUpVariants}>
+                        <h2 className='text-4xl font-semibold mb-6 border-b-2 border-purple-500'>Intro</h2>
+                        <p className='text-lg leading-relaxed'>
+                            I'm a passionate Software Engineer with a knack for creating dynamic and user-friendly web applications. My focus lies in delivering solutions that not only meet the user’s needs but also enhance their overall experience.
+                        </p>
+                    </motion.div>
+
+                    {/* Work History Section */}
+                    <motion.div className='mt-12' variants={fadeInUpVariants}>
+                        <h2 className='text-4xl font-semibold mb-6 border-b-2 border-purple-500'>Work History</h2>
+                        <div className='mt-8'>
+                            <h3 className='text-2xl font-bold'>Software Development Engineer - 1</h3>
+                            <h4 className='text-xl font-medium text-purple-300'>Visa (Jan 2024 - Present)</h4>
+                            <ul className='list-disc pl-6 text-lg space-y-3 mt-4'>
+                                <li>Implemented a multi-step smart form using React Js, featuring dynamic form progression based on user selections and full internationalization support. Leveraged React Context API and React Hooks for state management, while implementing reusable components and i18n functionality for seamless multi-language support.</li>
+                                <li>Developed reusable custom form input components adhering to VISA design standards, utilizing TypeScript for strict type safety and ensuring a unified user experience across applications.</li>
+                                <li>Revamped the legacy code by migrating from jQuery to React.js with React Redux for improved state management, while simultaneously upgrading the website from Bootstrap 4 to Bootstrap 5, resulting in a more modern, efficient, and responsive codebase with enhanced design consistency.</li>
+                                <li>Improved code quality and reduced technical debt by 30% through SonarQube integration. Reduced code smells by 25%, resolved over 100 issues, and enhanced code maintainability, security, and overall codebase quality.</li>
+                                <li>Redesigned the FAQ page to significantly increase website usability and customer satisfaction, resulting in a notable decrease in customer support queries. Developed comprehensive unit tests using Jest to ensure the stability and reliability of new features, minimizing the risk of bugs in production.</li>
+                                <li>Upgraded website accessibility from WCAG 2.1 Level A to Level AA, boosting the overall user experience and ensuring inclusivity for all users, including those with disabilities.</li>
+                                <li>Optimized data-driven decision-making by integrating Google Analytics with the events to track user behavior and gain valuable insights into customer interactions, enabling more effective optimization of the user experience.</li>
+                                <li>Collaborated effectively with cross-functional teams, including Product Managers for gathering requirements and QA team members for testing, while working closely with peers to ensure seamless integration and delivery, following Agile methodologies.</li>
+                            </ul>
+                        </div>
+                        <div className='mt-8'>
+                            <h3 className='text-2xl font-bold'>Software Development Engineer - 1</h3>
+                            <h4 className='text-xl font-medium text-purple-300'>Zivame (May 2022 - Jan 2024)</h4>
+                            <ul className='list-disc pl-6 text-lg space-y-3 mt-4'>
+                                <li>Developed and optimized the cart and checkout processes, ensuring cross-browser compatibility and improving the overall user journey.</li>
+                                <li>Achieved a 15% rise in conversion rates through the development of cross-browser-compatible and engaging website features.</li>
+                                <li>Contributed to the revamp of the home page, enhancing user experience and visual appeal, which helped achieve a 15% rise in conversion rates.</li>
+                                <li>Implemented a flexible refund method, resulting in a substantial ROI improvement from 7.13 to 10.1 and a 25% increase in customer retention.</li>
+                                <li>Integrated Moengage analytics and used A/B testing techniques, leading to a significant 15% boost in user engagement and a 10% increase in conversion rates.</li>
+                            </ul>
+                        </div>
+                    </motion.div>
+                </motion.div>
+                {/* Right Section */}
+                <div className="w-full md:w-1/4">
+                    <motion.div
+                        className="p-8 bg-purple-700 rounded-lg shadow-md text-white"
+                        initial="hidden"
+                        animate="visible"
+                        variants={fadeInUpVariants}
+                    >
+                        <h2 className='text-4xl font-semibold mb-6'>Skills</h2>
+                        <div>
+                            <h3 className='text-2xl font-bold'>Languages & Technologies</h3>
+                            <p className='text-lg mt-4'>JavaScript, React JS, React Redux, TypeScript, Node.js, SQL, Python, Java, HTML, CSS, SCSS, Bootstrap, TailwindCSS, REST API, AJAX, jQuery, MongoDb, Handlebars </p>
+                        </div>
+                        <div className='mt-8'>
+                            <h3 className='text-2xl font-bold'>Other Skills</h3>
+                            <p className='text-lg mt-4'>Data Structures & Algorithms, Agile Development, Web Accessibility, Git, Jest, Docker, Browser Developer Tools, Vite, webpack, SonarQube, Web Accessibility, MVC Architcture. </p>
+                        </div>
+                    </motion.div>
+                    <motion.div
+                        className="p-8 bg-purple-700 rounded-lg shadow-md text-white mt-8"
+                        initial="hidden"
+                        animate="visible"
+                        variants={fadeInUpVariants}
+                    >
+                        <h2 className='text-4xl font-semibold mb-6'>Other Interests</h2>
+                        <div>
+                            <h3 className='text-2xl font-bold'>Books</h3>
+                            <p className='text-lg mt-4'>Thinking Fast and Slow, The Fountainhead, Walden, Sapiens</p>
+                        </div>
+                        <div className='mt-8'>
+                            <h3 className='text-2xl font-bold'>Games</h3>
+                            <p className='text-lg mt-4'>Cricket, Badmiton, Marathon</p>
+                        </div>
+                        <div className='mt-8'>
+                            <h3 className='text-2xl font-bold'>Movies</h3>
+                            <p className='text-lg mt-4'>Schindlers List, Shawshank Redemption, Gladiator, Pushpakavimanam, SVSC, Kshanakshanam, Sarkar </p>
+                        </div>
+                        <div className='mt-8'>
+                            <h3 className='text-2xl font-bold'>Podcasts</h3>
+                            <p className='text-lg mt-4'>J Krishnamurti, Yuval Noah Harari, Andrew Huberman, Lex friedman</p>
+                        </div>
+                        <div className='mt-8'>
+                            <h3 className='text-2xl font-bold'>Fitness</h3>
+                            <p className='text-lg mt-4'>Iyengar Yoga, Dr Rowe fitness, Jeremy Either, Andrew Huberman.</p>
+                        </div>
+                        
+
+                    </motion.div>
+                </div>
+            </div>
         </div>
-    )
-}
+    );
+};
 
-export default About
+export default About;

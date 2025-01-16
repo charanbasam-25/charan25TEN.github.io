@@ -2,6 +2,21 @@
     "summary": "Enthusiastic and passionate Frontend developer dedicated to continuous learning and contributing to the betterment of the web. Committed to staying updated with emerging technologies and industry best practices. Strong foundation in frontend development, quick to adapt and learn new frameworks, languages, and tools.",
     "projects": [
         {
+            "title": "Social Circle",
+            "description": "Developed an app that enables users to like, follow, comment, post updates, change their profile picture, and play small games. The app also features product recommendations displayed in a carousel, allowing users to add items to their cart directly within the app. Additionally, it includes a simple note-taking feature for quick and easy notes.",
+            "technologies": [
+                "React js",
+                "Tailwind CSS",
+                "React Hooks",
+                "Node Js",
+                "Express Js",
+                "Mongo Db",
+                "JWT Token",
+                "REST API"
+            ],
+            "link": "https://social-circle-1.onrender.com/"
+        },
+        {
             "title": "Todos Application",
             "description": "Developed persistent todo application with CRUD operations to the tracklist of tasks",
             "technologies": [
@@ -12,6 +27,7 @@
             ],
             "link": "https://todoappbasam.ccbp.tech/"
         },
+
         {
             "title": "Fundamental Rights Quiz",
             "description": "Developed a fundamental rights Quiz UI where the user is allowed to start the quiz and select the answer among four options displayed.",
