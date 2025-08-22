@@ -11,7 +11,7 @@ const Header = () => {
     <header className="fixed top-0 w-full z-50 bg-black border-b border-green-500 shadow-[0_0_10px_#00ff41]">
       <nav className="header-component grid grid-flow-col items-center py-4 px-6 font-mono font-bold h-16">
         {/* Logo */}
-        <Link to="/" className="flex items-center lg:px-20">
+        <Link to="/" className="hidden md:flex items-center lg:px-20">
           <motion.img
             loading="lazy"
             className="w-16 h-16 rounded-full border-2 border-green-500 shadow-[0_0_15px_#00ff41]"
